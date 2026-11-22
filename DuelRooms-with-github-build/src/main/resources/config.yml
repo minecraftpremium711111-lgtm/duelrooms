@@ -1,0 +1,36 @@
+# DuelRooms - general settings
+settings:
+  countdown-seconds: 5            # freeze countdown before the fight (per-room override: /duel rooms set)
+  looting-seconds: 35             # looting time for the winner (per-room override: /duel rooms set)
+  heal-on-start: true             # heal/feed/clear effects of both players when the countdown starts
+  auto-respawn: true              # skip the death screen; loser is respawned at the room exit
+  suppress-death-messages: true   # hide vanilla death messages for duel deaths
+  broadcast-results: true         # announce the winner to the whole server
+  room-padding: 12.0              # blocks around the spawn points that count as "inside the room"
+  entrance-radius: 1.0            # horizontal trigger radius of an entrance (blocks)
+  message-cooldown-seconds: 3     # anti-spam for "room unavailable" style messages
+  waiting-timeout-seconds: 0      # kick a lone waiting player out after N seconds (0 = never)
+  spawn-fallback-ticks: 100       # if /spawn did not teleport the winner within this time, send them to the exit
+  bypass-while-in-duel: true      # players with duel.bypass ignore restrictions even while dueling (set false to test as OP)
+  escape-prevention: true         # keep duelists inside the room area
+  protect-blocks: true            # no block break/place/explosions inside rooms (except duel.bypass)
+  block-commands: true            # block commands for duelists (except allowed-commands / spawn commands)
+
+# Commands treated as "leave" commands (EssentialsX and aliases). Winner may use them while looting,
+# a waiting player may use them to leave. Lowercase, without the slash.
+spawn-commands:
+  - spawn
+  - essentials:spawn
+  - espawn
+  - essentials:espawn
+
+# Commands duelists may still use
+allowed-commands:
+  - duel
+  - duelrooms
+  - dr
+  - msg
+  - tell
+  - w
+  - r
+  - reply

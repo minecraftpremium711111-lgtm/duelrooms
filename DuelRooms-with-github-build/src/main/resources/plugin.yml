@@ -1,0 +1,23 @@
+name: DuelRooms
+version: 1.0.0
+main: com.duelrooms.DuelRoomsPlugin
+api-version: '1.21'
+description: Automatic 1v1 duel rooms with physical entrances, holograms and post-duel looting.
+softdepend: [Essentials, Multiverse-Core]
+commands:
+  duel:
+    description: DuelRooms main command
+    usage: /duel <rooms|leave|help>
+    aliases: [duelrooms, dr]
+permissions:
+  duel.use:
+    description: Enter duel rooms
+    default: true
+  duel.admin:
+    description: Full duel room management
+    default: op
+    children:
+      duel.use: true
+  duel.bypass:
+    description: Bypass duel room restrictions
+    default: op

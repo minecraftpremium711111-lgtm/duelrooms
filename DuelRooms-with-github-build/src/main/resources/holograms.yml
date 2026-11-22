@@ -1,0 +1,39 @@
+# Hologram settings. Per-hologram overrides: add 'height' and/or 'line-spacing' under holograms.<roomNumber>
+# Placeholders: {id} {name} {players} {max} {time}   Colors: & codes. Empty line = gap (no entity spawned).
+settings:
+  center-on-block: true       # snap created holograms to the horizontal center of the block
+  default-height: 3.5         # blocks above the saved location for the TOP line
+  default-line-spacing: 0.27  # distance between lines
+  view-range: 0.5             # display view range multiplier (~64 blocks * value)
+formats:
+  AVAILABLE:
+    - "&6&lDUEL ROOM #{id}"
+    - ""
+    - "&a&lAVAILABLE"
+    - ""
+    - "&7Players: &f{players}/{max}"
+    - ""
+    - "&e&lENTER TO JOIN"
+  WAITING:
+    - "&6&lDUEL ROOM #{id}"
+    - ""
+    - "&e&lWAITING FOR OPPONENT"
+    - ""
+    - "&7Players: &f{players}/{max}"
+  ACTIVE:
+    - "&6&lDUEL ROOM #{id}"
+    - ""
+    - "&c&lDUEL IN PROGRESS"
+    - ""
+    - "&7Players: &f{players}/{max}"
+  LOOTING:
+    - "&6&lDUEL ROOM #{id}"
+    - ""
+    - "&d&lLOOTING PERIOD"
+    - ""
+    - "&7Time Remaining: &f{time}s"
+  DISABLED:
+    - "&6&lDUEL ROOM #{id}"
+    - ""
+    - "&4&lROOM DISABLED"
+holograms: {}

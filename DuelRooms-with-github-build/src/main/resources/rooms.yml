@@ -1,0 +1,4 @@
+# Managed by DuelRooms. Use /duel rooms ... to edit. 'state' is informational only:
+# active duels cannot survive a restart, so every enabled room starts as AVAILABLE.
+rooms: {}
+pending-exit: {}
